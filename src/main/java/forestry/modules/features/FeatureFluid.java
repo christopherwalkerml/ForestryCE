@@ -161,7 +161,7 @@ public class FeatureFluid extends ModFeature implements IFluidFeature {
 
 				@Override
 				public ResourceLocation getFlowingTexture() {
-					return flowingTexture;
+					return FluidProperties.resourceExists(flowingTexture) ? flowingTexture : stillTexture;
 				}
 
 				@Override

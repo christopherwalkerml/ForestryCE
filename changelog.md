@@ -2,6 +2,7 @@
 - Actually fix painting variants
 - Phase out usage of java.awt.Color in common code to avoid potential server crashes with certain providers
 - Fix fluids preventing blocks from being placed in them (#166)
+- Fix fluids not rendering their flowing textures properly in the overworld (#167)
 
 ## Forestry 2.3.2
 - Fix paintings only being available through commands

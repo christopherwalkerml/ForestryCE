@@ -3,7 +3,6 @@ package forestry.modules.features;
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 
@@ -12,6 +11,7 @@ import net.minecraftforge.data.loading.DatagenModLoader;
 
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
+import forestry.core.ClientsideCode;
 import forestry.core.items.definitions.DrinkProperties;
 
 public class FluidProperties {
@@ -36,16 +36,13 @@ public class FluidProperties {
 		this.properties = builder.properties;
 		this.resources[0] = builder.registry.getModuleId().withPath("block/liquid/" + builder.identifier + "_still");
 		this.resources[1] = builder.registry.getModuleId().withPath("block/liquid/" + builder.identifier + "_flow");
-		if (!resourceExists(resources[1])) {
-			this.resources[1] = resources[0];
-		}
 		this.bucket = builder.bucket;
 	}
 
-	public boolean resourceExists(ResourceLocation location) {
+	public static boolean resourceExists(ResourceLocation location) {
 		if (FMLEnvironment.dist == Dist.DEDICATED_SERVER || DatagenModLoader.isRunningDataGen()) {
 			return true;
 		}
-		return Minecraft.getInstance().getResourceManager().getResource(location).isPresent();
+		return ClientsideCode.getResource(location.withPath(path -> "textures/" + path + ".png")).isPresent();
 	}
 }

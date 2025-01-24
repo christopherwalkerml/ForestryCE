@@ -2,12 +2,16 @@ package forestry.core;
 
 import javax.annotation.Nullable;
 
+import java.util.Optional;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.material.Fluid;
 
@@ -42,5 +46,9 @@ public class ClientsideCode {
 
 	public static RegistryAccess getRegistryAccess() {
 		return Minecraft.getInstance().level.registryAccess();
+	}
+
+	public static Optional<Resource> getResource(ResourceLocation path) {
+		return Minecraft.getInstance().getResourceManager().getResource(path);
 	}
 }
