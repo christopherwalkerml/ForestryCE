@@ -38,7 +38,7 @@ public class BlockForestryFluid extends LiquidBlock {
 	private final boolean explodes;
 
 	public BlockForestryFluid(FeatureFluid feature) {
-		super(feature::fluid, Block.Properties.of().liquid().noCollission().noLootTable());
+		super(feature::fluid, Block.Properties.of().liquid().noCollission().noLootTable().replaceable());
 		FluidProperties properties = feature.properties();
 		this.flammability = properties.flammability;
 		this.spreadsFire = properties.spreadsFire;
