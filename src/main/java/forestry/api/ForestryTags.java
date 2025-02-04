@@ -83,6 +83,8 @@ public class ForestryTags {
 		public static final TagKey<Block> MODEST_BEE_GROUND = blockTag("hive_grounds/modest");
 		public static final TagKey<Block> ENDED_BEE_GROUND = blockTag("hive_grounds/ended");
 		public static final TagKey<Block> WINTRY_BEE_GROUND = blockTag("hive_grounds/wintry");
+		public static final TagKey<Block> LUSH_BEE_CEILING = blockTag("hive_grounds/lush");
+		public static final TagKey<Block> CAVE_EXTRA_REPLACEABLES = blockTag("hive_grounds/cave_extra_replaceable");
 		// Blocks where the Alveary Swarmer can spawn hives on top of
 		public static final TagKey<Block> SWARM_BEE_GROUND = blockTag("hive_grounds/swarm");
 

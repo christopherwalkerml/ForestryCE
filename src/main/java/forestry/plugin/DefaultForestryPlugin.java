@@ -248,6 +248,10 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 				.addDrop(0.80, ForestryBeeSpecies.SAVANNA, parchedComb, 0.7f)
 				.addDrop(0.03, ForestryBeeSpecies.VALIANT, parchedComb);
 
+		apiculture.registerHive(ForestryBeeSpecies.LUSH, HiveDefinition.LUSH)
+				.addDrop(0.80, ForestryBeeSpecies.LUSH, honeyComb, 0.5F)
+				.addDrop(0.08, ForestryBeeSpecies.VALIANT, honeyComb);
+
 
 		// Common village bees
 		apiculture.addVillageBee(ForestryBeeSpecies.FOREST, false);
