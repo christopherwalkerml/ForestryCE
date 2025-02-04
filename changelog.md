@@ -1,3 +1,7 @@
+## Forestry 2.4.1
+- Require Forge 47.3.5 to fix Hanging Signs crash (#174)
+- Dropped NeoForge support. There is absolutely no reason to use NeoForge in 1.20.1.
+
 ## Forestry 2.4.0
 - Add Lush bee genus, thanks to EnderiumSmith (#180)
   - Add new Lush species, which spawns naturally in Lush Caves biomes
