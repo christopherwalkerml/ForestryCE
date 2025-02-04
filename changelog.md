@@ -1,3 +1,11 @@
+## Forestry 2.4.0
+- Add Lush bee genus, thanks to EnderiumSmith (#180)
+  - Add new Lush species, which spawns naturally in Lush Caves biomes
+  - Add new Verdant species, which can produce Small Dripleaf blocks
+  - Add new Luxuriant species, which can speed up growth of Glow Berrires and has Fast pollination
+- Fix Chinese (Simplified) translation, thanks to ChuijkYahus (#178)
+- Fix Ukrainian translation, thanks to yevgmikh (#181)
+
 ## Forestry 2.3.3
 - Actually fix painting variants
 - Phase out usage of java.awt.Color in common code to avoid potential server crashes with certain providers
