@@ -27,6 +27,8 @@ public class ForestryItemTagsProvider {
 		tags.copy(Tags.Blocks.CHESTS, Tags.Items.CHESTS);
 		tags.copy(BlockTags.PLANKS, ItemTags.PLANKS);
 		tags.copy(BlockTags.LOGS, ItemTags.LOGS);
+		tags.copy(BlockTags.STANDING_SIGNS, ItemTags.SIGNS);
+		tags.copy(BlockTags.CEILING_HANGING_SIGNS, ItemTags.HANGING_SIGNS);
 		tags.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
 		for (ForestryWoodType type : ForestryWoodType.VALUES) {
 			tags.copy(type.blockTag, type.itemTag);

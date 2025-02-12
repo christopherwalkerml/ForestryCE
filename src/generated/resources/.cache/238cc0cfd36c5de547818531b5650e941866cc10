@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-15T19:56:18.4778744	Tags for minecraft:item mod id forestry
+// 1.20.1	2025-02-12T15:45:36.8777845	Tags for minecraft:item mod id forestry
 37a390e7a402ae2ce1addd2b8bbefd6229e8c7c6 data/forestry/tags/items/acacia_desert_logs.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forestry/tags/items/backpack/allow/adventurer.json
 426fdc880d77e5feaa70125d93a57b7ce21dbc2b data/forestry/tags/items/backpack/allow/builder.json
@@ -88,12 +88,14 @@ fb0bd2460dbe1ab5a379bc617361df42116a0b6e data/minecraft/tags/items/chest_boats.j
 fd7f5b8d14cefaa9260c3a25ed12037ccad07bac data/minecraft/tags/items/dirt.json
 535a46aff3a61f198d4837345f5a5f16d84d4e1d data/minecraft/tags/items/doors.json
 ce6210a1da642c35100b944ac690d4e987fbd2fe data/minecraft/tags/items/fences.json
+39ce810f3b19b5efa70cab096e02ed2dc753ff60 data/minecraft/tags/items/hanging_signs.json
 67f7f6abdeb398ab237a01d47b715b183d6acb10 data/minecraft/tags/items/leaves.json
 907e29db16d014573c0eab0dd86b75f4ff86c0df data/minecraft/tags/items/logs.json
 8852fdd7b83c31be85aee7afc254e2d4328ac7a4 data/minecraft/tags/items/logs_that_burn.json
 931dd7265d2187cbb7d0310987b312520ac6515e data/minecraft/tags/items/non_flammable_wood.json
 b8d8845e32db9a28a151672112321b3b2ef862c6 data/minecraft/tags/items/planks.json
 08e1c8fddff888b2e2b86f112d281dcdcd9c970e data/minecraft/tags/items/saplings.json
+ec2b9b82d9bb7662750ec7ea524fe6aaa80e1dcf data/minecraft/tags/items/signs.json
 7490f2ef65e294f43406b0accf0563e09ef6a664 data/minecraft/tags/items/slabs.json
 aa896dcb75240a90479818bdceee0539fdb24ada data/minecraft/tags/items/stairs.json
 535a46aff3a61f198d4837345f5a5f16d84d4e1d data/minecraft/tags/items/wooden_doors.json

@@ -1,7 +1,10 @@
 ## Forestry 2.4.1
 - Require Forge 47.3.5 to fix Hanging Signs crash (#174)
 - Dropped NeoForge support. There is absolutely no reason to use NeoForge in 1.20.1.
-- Fix Forestry structure loot not appearing in chests, thanks to EnderiumSmith
+- Fix Forestry structure loot not appearing in chests, thanks to EnderiumSmith (#183)
+- Add Shulking bee species, thanks to EnderiumSmith
+- Add Sign items to #minecraft:signs item tag
+- Add Hanging Sign items to #minecraft:hanging_signs item tag
 
 ## Forestry 2.4.0
 - Add Lush bee genus, thanks to EnderiumSmith (#180)
