@@ -152,6 +152,7 @@ public class ForestryAlleles {
 	public static final IRegistryAllele<IBeeEffect> EFFECT_SIFTER = REGISTRY.registryAllele(ForestryBeeEffects.SIFTER, BeeChromosomes.EFFECT);
 	public static final IRegistryAllele<IBeeEffect> EFFECT_HAKUNA_MATATA = REGISTRY.registryAllele(ForestryBeeEffects.HAKUNA_MATATA, BeeChromosomes.EFFECT);
 	public static final IRegistryAllele<IBeeEffect> EFFECT_GLOW_BERRY_GROW = REGISTRY.registryAllele(ForestryBeeEffects.GLOW_BERRY_GROW, BeeChromosomes.EFFECT);
+	public static final IRegistryAllele<IBeeEffect> EFFECT_ASCENSION = REGISTRY.registryAllele(ForestryBeeEffects.ASCENSION, BeeChromosomes.EFFECT);
 	//public static final IRegistryAllele<IBeeEffect> EFFECT_PATRIOTIC = Todos.todo();
 
 	// Speed

@@ -3,6 +3,7 @@ package forestry.plugin;
 import java.awt.Color;
 import java.time.Month;
 
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.item.ItemStack;
@@ -752,5 +753,18 @@ public class DefaultBeeSpecies {
 				})
 				.setAuthority("EnderiumSmith")
 				.setGlint(true);
+
+		// SHULKING
+		apiculture.registerSpecies(ForestryBeeSpecies.SHULKING, GENUS_END, SPECIES_SHULKING, false, new Color(0x896D74))
+				.setBody(TextColor.fromRgb(0xd9de9e))
+				.setTemperature(TemperatureType.COLD)
+				.setHumidity(HumidityType.ARID)
+				.addProduct(BEE_COMBS.stack(EnumHoneyComb.MYSTERIOUS), 0.20f)
+				.addSpecialty(new ItemStack(Items.SHULKER_SHELL), 0.015F)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.EFFECT, ForestryAlleles.EFFECT_ASCENSION);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOW);
+				})
+				.setAuthority("EnderiumSmith");
 	}
 }

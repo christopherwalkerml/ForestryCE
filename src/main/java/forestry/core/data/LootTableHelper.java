@@ -105,7 +105,7 @@ public class LootTableHelper {
 								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
 								.setWeight(20)
 						)
-						.add(beeLoot(ForestryBeeSpecies.ENDED)
+						.add(beeLoot(ForestryBeeSpecies.SHULKING)
 								.apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
 								.setWeight(20)
 						)

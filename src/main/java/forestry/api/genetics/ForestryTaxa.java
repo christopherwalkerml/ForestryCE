@@ -209,6 +209,7 @@ public class ForestryTaxa {
 	public static final String SPECIES_LUSH = "atvatabari";
 	public static final String SPECIES_VERDANT = "lidenbrocki";
 	public static final String SPECIES_LUXURIANT = "verni";
+	public static final String SPECIES_SHULKING = "shurukui";
 	// Tree Species
 	public static final String SPECIES_OAK = "robur";
 	public static final String SPECIES_DARK_OAK = "velutina";
