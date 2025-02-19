@@ -1,5 +1,6 @@
 ## Forestry 2.4.2
 - Reimplement config option for changing Forestry tree natural spawn rate
+- Reimplement config option to disable butterfly spawning
 
 ## Forestry 2.4.1
 - Require Forge 47.3.5 to fix Hanging Signs crash (#174)

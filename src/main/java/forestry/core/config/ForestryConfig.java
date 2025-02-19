@@ -90,6 +90,7 @@ public class ForestryConfig {
 		public final ForgeConfigSpec.IntValue legacyFarmsRingSize;
 		// Misc
 		public final ForgeConfigSpec.BooleanValue enableBackpackResupply;
+		public final ForgeConfigSpec.BooleanValue disableButterflySpawning;
 
 		public Server(ForgeConfigSpec.Builder builder) {
 			// Genetics
@@ -143,6 +144,9 @@ public class ForestryConfig {
 
 			// Butterflies
 			builder.push("butterflies");
+			this.disableButterflySpawning = builder
+					.comment("Whether butterflies can spawn from Forestry leaves.")
+					.define("disable_butterfly_spawning", false);
 			this.butterflyClusterLimit = builder
 					.comment("The maximum number of butterflies that can spawn in the same area or cluster.")
 					.defineInRange("butterfly_cluster_limit", 20, 1, 2000);
