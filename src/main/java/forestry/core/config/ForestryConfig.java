@@ -76,6 +76,8 @@ public class ForestryConfig {
 		public final ForgeConfigSpec.BooleanValue pollinateVanillaLeaves;
 		public final ForgeConfigSpec.DoubleValue wildHiveSpawnRate;
 		public final ForgeConfigSpec.BooleanValue useHaploidDrones;
+		// Trees
+		public final ForgeConfigSpec.DoubleValue treesSpawnNaturally;
 		// Butterflies
 		public final ForgeConfigSpec.IntValue butterflyClusterLimit;
 		public final ForgeConfigSpec.IntValue butterflyClusterWidth;
@@ -130,6 +132,13 @@ public class ForestryConfig {
 			this.legacyFarmsRingSize = builder
 					.comment("Sets the size of the inner ring of the ring layout.")
 					.defineInRange("legacy_farms_ring_size", 4, 1, 10);
+			builder.pop();
+
+			// Trees
+			builder.push("trees");
+			this.treesSpawnNaturally = builder
+					.comment("Multiplies the chance of a Forestry tree spawning in the wild. Set to 0 to disable Forestry tree spawning.")
+					.defineInRange("tree_spawn_chance_modifier", 1.0f, 0.0f, 1000000.0f);
 			builder.pop();
 
 			// Butterflies
