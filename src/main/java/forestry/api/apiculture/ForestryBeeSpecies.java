@@ -59,5 +59,8 @@ public class ForestryBeeSpecies {
 	public static final ResourceLocation LUSH = forestry("bee_lush");
 	public static final ResourceLocation VERDANT = forestry("bee_verdant");
 	public static final ResourceLocation LUXURIANT = forestry("bee_luxuriant");
+	public static final ResourceLocation KLEPTOPLASTIC = forestry("bee_kleptoplastic");
+	public static final ResourceLocation PHOTOSYNTHETIC = forestry("bee_photosynthetic");
+	public static final ResourceLocation AUTOTROPHIC = forestry("bee_autotrophic");
 	public static final ResourceLocation SHULKING = forestry("bee_shulking");
 }

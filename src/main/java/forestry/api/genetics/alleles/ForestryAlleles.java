@@ -128,6 +128,7 @@ public class ForestryAlleles {
 	public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_WHEAT = REGISTRY.registryAllele(ForestryFlowerTypes.WHEAT, BeeChromosomes.FLOWER_TYPE);
 	public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_GOURD = REGISTRY.registryAllele(ForestryFlowerTypes.GOURD, BeeChromosomes.FLOWER_TYPE);
 	public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_CAVE = REGISTRY.registryAllele(ForestryFlowerTypes.CAVE, BeeChromosomes.FLOWER_TYPE);
+	public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_PHOTOSYNTHESIS = REGISTRY.registryAllele(ForestryFlowerTypes.PHOTOSYNTHESIS, BeeChromosomes.FLOWER_TYPE);
 
 	// Bee Effect
 	public static final IRegistryAllele<IBeeEffect> EFFECT_NONE = REGISTRY.registryAllele(ForestryBeeEffects.NONE, BeeChromosomes.EFFECT);

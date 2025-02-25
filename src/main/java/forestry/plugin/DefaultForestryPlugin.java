@@ -50,6 +50,7 @@ import forestry.apiculture.CathemeralActivityType;
 import forestry.apiculture.CrepuscularActivityType;
 import forestry.apiculture.EndFlowerType;
 import forestry.apiculture.FlowerType;
+import forestry.apiculture.PhotosynthesisFlowerType;
 import forestry.apiculture.SingleActivityType;
 import forestry.apiculture.features.ApicultureEffects;
 import forestry.apiculture.features.ApicultureItems;
@@ -280,6 +281,7 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerFlowerType(ForestryFlowerTypes.WHEAT, new FlowerType(ForestryTags.Blocks.WHEAT_FLOWERS, true));
 		apiculture.registerFlowerType(ForestryFlowerTypes.GOURD, new FlowerType(ForestryTags.Blocks.GOURD_FLOWERS, true));
 		apiculture.registerFlowerType(ForestryFlowerTypes.CAVE, new FlowerType(ForestryTags.Blocks.CAVE_FLOWERS, true));
+		apiculture.registerFlowerType(ForestryFlowerTypes.PHOTOSYNTHESIS, new PhotosynthesisFlowerType());
 
 		apiculture.registerBeeEffect(ForestryBeeEffects.NONE, new DummyBeeEffect(true));
 		apiculture.registerBeeEffect(ForestryBeeEffects.AGGRESSIVE, new AggressiveBeeEffect());

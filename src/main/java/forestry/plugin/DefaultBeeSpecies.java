@@ -28,6 +28,10 @@ import forestry.core.genetics.mutations.MutationConditionCave;
 import forestry.core.items.definitions.EnumCraftingMaterial;
 
 import static forestry.api.genetics.ForestryTaxa.*;
+import static forestry.api.genetics.ForestryTaxa.GENUS_KLEPTOPLASTIC;
+import static forestry.api.genetics.ForestryTaxa.SPECIES_AUTOTROPHIC;
+import static forestry.api.genetics.ForestryTaxa.SPECIES_KLEPTOPLASTIC;
+import static forestry.api.genetics.ForestryTaxa.SPECIES_PHOTOSYNTHETIC;
 import static forestry.apiculture.features.ApicultureItems.BEE_COMBS;
 import static forestry.apiculture.features.ApicultureItems.POLLEN_CLUSTER;
 
@@ -753,6 +757,47 @@ public class DefaultBeeSpecies {
 				})
 				.setAuthority("EnderiumSmith")
 				.setGlint(true);
+
+		// KLEPTOPLASTIC
+		apiculture.registerSpecies(ForestryBeeSpecies.KLEPTOPLASTIC, GENUS_KLEPTOPLASTIC, SPECIES_KLEPTOPLASTIC, false, new Color(0xffc987))
+				.setBody(new Color(0x64E986))
+				.addProduct(BEE_COMBS.stack(EnumHoneyComb.HONEY), 0.30F)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
+				})
+				.addMutations(mutations -> {
+					mutations.add(ForestryBeeSpecies.LUXURIANT, ForestryBeeSpecies.MONASTIC, 12);
+				})
+				.setAuthority("EnderiumSmith");
+
+		// PHOTOSYNTHETIC
+		apiculture.registerSpecies(ForestryBeeSpecies.PHOTOSYNTHETIC, GENUS_KLEPTOPLASTIC, SPECIES_PHOTOSYNTHETIC, true, new Color(0xB6C9FF))
+				.setBody(new Color(0x64E986))
+				.addProduct(BEE_COMBS.stack(EnumHoneyComb.HONEY), 0.40F)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_FAST);
+				})
+				.addMutations(mutations -> {
+					mutations.add(ForestryBeeSpecies.KLEPTOPLASTIC, ForestryBeeSpecies.LUXURIANT, 8);
+					mutations.add(ForestryBeeSpecies.KLEPTOPLASTIC, ForestryBeeSpecies.MONASTIC, 8);
+				})
+				.setAuthority("EnderiumSmith");
+
+		// AUTOTROPHIC
+		apiculture.registerSpecies(ForestryBeeSpecies.AUTOTROPHIC, GENUS_KLEPTOPLASTIC, SPECIES_AUTOTROPHIC, false, new Color(0xFFF5EC))
+				.setBody(new Color(0x64E986))
+				.addProduct(BEE_COMBS.stack(EnumHoneyComb.HONEY), 0.30F)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGEST);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_FASTER);
+				})
+				.addMutations(mutations -> {
+					mutations.add(ForestryBeeSpecies.KLEPTOPLASTIC, ForestryBeeSpecies.PHOTOSYNTHETIC, 4);
+				})
+				.setGlint(true)
+				.setAuthority("EnderiumSmith");
 
 		// SHULKING
 		apiculture.registerSpecies(ForestryBeeSpecies.SHULKING, GENUS_END, SPECIES_SHULKING, false, new Color(0x896D74))
