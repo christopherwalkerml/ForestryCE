@@ -18,4 +18,8 @@ public class CorePaintings {
 
 	public static final RegistryObject<PaintingVariant> MOUSETREE = PAINTINGS.register("mousetree", () -> new PaintingVariant(48, 48));
 	public static final RegistryObject<PaintingVariant> WASPHOL = PAINTINGS.register("wasphol", () -> new PaintingVariant(32, 32));
+	public static final RegistryObject<PaintingVariant> CAGE = PAINTINGS.register("cage", () -> new PaintingVariant(32, 32));
+	public static final RegistryObject<PaintingVariant> LEWIS = PAINTINGS.register("lewis", () -> new PaintingVariant(32, 48));
+	public static final RegistryObject<PaintingVariant> SITEBEE = PAINTINGS.register("site_bee", () -> new PaintingVariant(32, 32));
+	public static final RegistryObject<PaintingVariant> ALEXBLOOME = PAINTINGS.register("alex_bloome", () -> new PaintingVariant(64, 32));
 }

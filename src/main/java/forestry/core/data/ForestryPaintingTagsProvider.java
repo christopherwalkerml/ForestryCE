@@ -12,6 +12,10 @@ public class ForestryPaintingTagsProvider {
 	public static void addTags(MKTagsProvider<PaintingVariant> tags, HolderLookup.Provider lookup) {
 		tags.tag(PaintingVariantTags.PLACEABLE)
 				.add(CorePaintings.MOUSETREE)
-				.add(CorePaintings.WASPHOL);
+				.add(CorePaintings.WASPHOL)
+				.add(CorePaintings.CAGE)
+				.add(CorePaintings.LEWIS)
+				.add(CorePaintings.SITEBEE)
+				.add(CorePaintings.ALEXBLOOME);
 	}
 }
