@@ -16,6 +16,10 @@ public class ForestryPaintingTagsProvider {
 				.add(CorePaintings.CAGE)
 				.add(CorePaintings.LEWIS)
 				.add(CorePaintings.SITEBEE)
-				.add(CorePaintings.ALEXBLOOME);
+				.add(CorePaintings.ALEXBLOOME)
+				.add(CorePaintings.DEKU)
+				.add(CorePaintings.MYSTICAL_TREE)
+				.add(CorePaintings.SUSPICIOUS_LOOKING_TREE)
+				.add(CorePaintings.WISDOM);
 	}
 }
