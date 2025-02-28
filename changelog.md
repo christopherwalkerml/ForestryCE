@@ -9,6 +9,7 @@
   - Added Photosynthetic bee species with "Fast" pollination
   - Added Autotroph bee species with "Faster" pollination, the fastest of any species in base Forestry
 - Added missing mutation for Myrtle Ebony (#186)
+- Fix percentage values displaying incorrectly for centrifuge (#168)
 
 ## Forestry 2.4.2
 - Reimplement config option for changing Forestry tree natural spawn rate
