@@ -69,6 +69,7 @@ import forestry.apiculture.genetics.effects.GuardianBeeEffect;
 import forestry.apiculture.genetics.effects.HeroicBeeEffect;
 import forestry.apiculture.genetics.effects.IgnitionBeeEffect;
 import forestry.apiculture.genetics.effects.MisanthropeBeeEffect;
+import forestry.apiculture.genetics.effects.PhasingBeeEffect;
 import forestry.apiculture.genetics.effects.PotionBeeEffect;
 import forestry.apiculture.genetics.effects.PotionBeeEffectExclusive;
 import forestry.apiculture.genetics.effects.RadioactiveBeeEffect;
@@ -220,6 +221,7 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		Supplier<List<ItemStack>> frozenComb = getHoneyComb(EnumHoneyComb.FROZEN);
 		Supplier<List<ItemStack>> mossyComb = getHoneyComb(EnumHoneyComb.MOSSY);
 		Supplier<List<ItemStack>> spongeComb = getHoneyComb(EnumHoneyComb.SPONGE);
+		Supplier<List<ItemStack>> simmerComb = getHoneyComb(EnumHoneyComb.SIMMERING);
 
 		apiculture.registerHive(ForestryBeeSpecies.FOREST, HiveDefinition.FOREST)
 				.addDrop(0.80, ForestryBeeSpecies.FOREST, honeyComb, 0.7f)
@@ -260,6 +262,9 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerHive(ForestryBeeSpecies.AQUATIC, HiveDefinition.AQUATIC)
 				.addDrop(0.80, ForestryBeeSpecies.AQUATIC, spongeComb, 0.4F)
 				.addDrop(0.03, ForestryBeeSpecies.VALIANT, spongeComb);
+
+		apiculture.registerHive(ForestryBeeSpecies.EMBITTERED, HiveDefinition.NETHER)
+				.addDrop(0.80, ForestryBeeSpecies.EMBITTERED, simmerComb, 0.7F);
 
 		// Common village bees
 		apiculture.addVillageBee(ForestryBeeSpecies.FOREST, false);
@@ -314,6 +319,7 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerBeeEffect(ForestryBeeEffects.HAKUNA_MATATA, new PotionBeeEffectExclusive(false, ApicultureEffects.HAKUNA_MATATA.get(), 20 * 60 * 3, 100, 1.0f, ApicultureEffects.MATATA.get()));
 		apiculture.registerBeeEffect(ForestryBeeEffects.GLOW_BERRY_GROW, new GlowBerryGrowEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.GUARDIAN, new GuardianBeeEffect());
+		apiculture.registerBeeEffect(ForestryBeeEffects.PHASING, new PhasingBeeEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.ASCENSION, new AscensionBeeEffect());
 
 		apiculture.registerActivityType(ForestryActivityTypes.DIURNAL, new SingleActivityType(0, 12000, ForestryError.NOT_DAY, LightPreference.ANY));
