@@ -5,6 +5,7 @@
   - Add new Seething bee species that produces Blaze powder
   - Add new Warped bee species that produces both Mysterious and Simmering combs
 - Add ForestryEvent.BeeMatingEvent to allow for special mating conditions
+- Make Savanna & Desert lines Nocturnal instead of Metaturnal
 
 ## Forestry 2.4.3
 - Add Aquatic bee genus, thanks to EnderiumSmith
