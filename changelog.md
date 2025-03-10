@@ -6,6 +6,7 @@
   - Add new Warped bee species that produces both Mysterious and Simmering combs
 - Add ForestryEvent.BeeMatingEvent to allow for special mating conditions
 - Make Savanna & Desert lines Nocturnal instead of Metaturnal
+- Give Village common bees boosted climate tolerance
 
 ## Forestry 2.4.3
 - Add Aquatic bee genus, thanks to EnderiumSmith

@@ -277,7 +277,10 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 
 		// Rare village bees
 		apiculture.addVillageBee(ForestryBeeSpecies.FOREST, true, Map.of(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.TRUE));
-		apiculture.addVillageBee(ForestryBeeSpecies.COMMON, true);
+		apiculture.addVillageBee(ForestryBeeSpecies.COMMON, true, Map.of(
+				BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1,
+				BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1
+		));
 		apiculture.addVillageBee(ForestryBeeSpecies.VALIANT, true);
 
 		// Default flower types
