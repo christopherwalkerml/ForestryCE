@@ -373,9 +373,11 @@ public class BeekeepingLogic implements IBeekeepingLogic {
 		if (MinecraftForge.EVENT_BUS.post(event)) {
 			princess.setMate(originalMate);
 			return;
+		} else {
+			princess = event.getPrincess();
 		}
 
-		this.queenStack = event.getPrincess().createStack(BeeLifeStage.QUEEN);
+		this.queenStack = princess.createStack(BeeLifeStage.QUEEN);
 		beeInventory.setQueen(this.queenStack);
 
 		// Register the new queen with the breeding tracker

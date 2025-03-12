@@ -41,6 +41,7 @@ public abstract class ForestryEvent extends Event {
 
 	/**
 	 * Fired before a queen is created as a result of breeding a princess and a drone.
+	 * @since 2.4.4
 	 */
 	@Cancelable
 	public static class BeeMatingEvent extends ForestryEvent {
