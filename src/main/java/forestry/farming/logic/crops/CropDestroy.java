@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 import java.util.Iterator;
 import java.util.List;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 
 import forestry.core.utils.BlockUtil;
 import forestry.core.utils.ItemStackUtil;
 
-// todo ensure this works correctly
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+
 public class CropDestroy extends Crop {
 	protected final BlockState blockState;
 	@Nullable
@@ -51,21 +51,21 @@ public class CropDestroy extends Crop {
 	@Override
 	protected List<ItemStack> harvestBlock(Level level, BlockPos pos) {
 		List<ItemStack> harvested = Block.getDrops(blockState, (ServerLevel) level, pos, level.getBlockEntity(pos));
-		float chance = 1.0F;
+		if (!(harvested instanceof ObjectArrayList)) {
+			// Fix crash with mods that don't use ObjectArrayList like LootTable.getRandomItems does
+			harvested = ObjectArrayList.wrap(harvested.toArray(ItemStack[]::new));
+		}
 		boolean removedSeed = germling.isEmpty();
 		Iterator<ItemStack> dropIterator = harvested.iterator();
 		while (dropIterator.hasNext()) {
 			ItemStack next = dropIterator.next();
-			if (level.random.nextFloat() <= chance) {
-				if (!removedSeed && ItemStackUtil.isIdenticalItem(next, germling)) {
-					next.shrink(1);
-					if (next.isEmpty()) {
-						dropIterator.remove();
-					}
-					removedSeed = true;
+
+			if (!removedSeed && ItemStackUtil.isIdenticalItem(next, germling)) {
+				next.shrink(1);
+				if (next.isEmpty()) {
+					dropIterator.remove();
 				}
-			} else {
-				dropIterator.remove();
+				removedSeed = true;
 			}
 		}
 
@@ -76,11 +76,8 @@ public class CropDestroy extends Crop {
 		} else {
 			level.destroyBlock(pos, false);
 		}
-		if (!(harvested instanceof NonNullList)) {
-			return NonNullList.of(ItemStack.EMPTY, harvested.toArray(new ItemStack[0]));
-		} else {
-			return harvested;
-		}
+
+		return harvested;
 	}
 
 	@Override

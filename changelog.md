@@ -1,5 +1,6 @@
 ## Forestry 2.4.5
 - Fix bugged bee breeding. Sorry! (#199)
+- Create mutable copy of block drops to fix farm crash (#193)
 
 ## Forestry 2.4.4
 - Add Embittered bee genus, thanks to EnderiumSmith
