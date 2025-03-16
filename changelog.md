@@ -1,3 +1,6 @@
+## Forestry 2.4.5
+- Fix bugged bee breeding. Sorry! (#199)
+
 ## Forestry 2.4.4
 - Add Embittered bee genus, thanks to EnderiumSmith
   - Add new Embittered bee species that spawns in Warped Forest biomes underneath Huge Warped Fungus

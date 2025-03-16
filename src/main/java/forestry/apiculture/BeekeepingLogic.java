@@ -368,10 +368,11 @@ public class BeekeepingLogic implements IBeekeepingLogic {
 		IGenome originalMate = princess.getMate();
 		princess.setMate(drone.getGenome());
 
-		ForestryEvent.BeeMatingEvent event = new ForestryEvent.BeeMatingEvent(this.housing, drone, princess);
+		ForestryEvent.BeeMatingEvent event = new ForestryEvent.BeeMatingEvent(this.housing, princess, drone);
 
 		if (MinecraftForge.EVENT_BUS.post(event)) {
 			princess.setMate(originalMate);
+			this.beeProgress = 0;
 			return;
 		} else {
 			princess = event.getPrincess();
