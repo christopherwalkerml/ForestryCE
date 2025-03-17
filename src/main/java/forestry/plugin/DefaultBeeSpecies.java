@@ -35,7 +35,7 @@ import static forestry.apiculture.features.ApicultureItems.POLLEN_CLUSTER;
 public class DefaultBeeSpecies {
 	@SuppressWarnings("CodeBlock2Expr")
 	public static void register(IApicultureRegistration apiculture) {
-		ResourceLocation[] overworldHiveBees = new ResourceLocation[]{ForestryBeeSpecies.FOREST, ForestryBeeSpecies.MARSHY, ForestryBeeSpecies.MEADOWS, ForestryBeeSpecies.MODEST, ForestryBeeSpecies.SAVANNA, ForestryBeeSpecies.TROPICAL, ForestryBeeSpecies.VALIANT, ForestryBeeSpecies.WINTRY, ForestryBeeSpecies.ENDED};
+		ResourceLocation[] overworldHiveBees = new ResourceLocation[]{ForestryBeeSpecies.FOREST, ForestryBeeSpecies.MARSHY, ForestryBeeSpecies.MEADOWS, ForestryBeeSpecies.MODEST, ForestryBeeSpecies.SAVANNA, ForestryBeeSpecies.TROPICAL, ForestryBeeSpecies.VALIANT, ForestryBeeSpecies.WINTRY, ForestryBeeSpecies.ENDED, ForestryBeeSpecies.LUSH, ForestryBeeSpecies.AQUATIC};
 
 		// Forest
 		apiculture.registerSpecies(ForestryBeeSpecies.FOREST, GENUS_HONEY, SPECIES_FOREST, true, new Color(0x19d0ec))
