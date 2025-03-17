@@ -1,3 +1,6 @@
+## Forestry 2.4.6
+- Added Lush and Aquatic Bees to shared breeding patterns (#190)
+
 ## Forestry 2.4.5
 - Fix bugged bee breeding. Sorry! (#199)
 - Create mutable copy of block drops to fix farm crash (#193)
