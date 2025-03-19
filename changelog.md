@@ -1,3 +1,6 @@
+## Forestry 2.4.7
+- Add missing sponge comb recipes (#202)
+
 ## Forestry 2.4.6
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)
 

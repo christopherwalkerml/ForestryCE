@@ -1960,6 +1960,13 @@ public class ForestryRecipeProvider {
 				.build(consumer, id("squeezer", "honey_drop"));
 		new SqueezerRecipeBuilder()
 				.setProcessingTime(10)
+				.setResources(NonNullList.withSize(1, Ingredient.of(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.SPONGE))))
+				.setFluidOutput(honeyDropFluid)
+				.setRemnants(new ItemStack(Items.SPONGE))
+				.setRemnantsChance(2 / 100f)
+				.build(consumer, id("squeezer", "sponge_comb"));
+		new SqueezerRecipeBuilder()
+				.setProcessingTime(10)
 				.setResources(NonNullList.withSize(1, Ingredient.of(ApicultureItems.HONEYDEW)))
 				.setFluidOutput(honeyDropFluid)
 				.build(consumer, id("squeezer", "honey_dew"));
