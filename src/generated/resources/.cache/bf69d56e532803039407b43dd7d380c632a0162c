@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-06T14:02:44.9956502	Tags for minecraft:block mod id forestry
+// 1.20.1	2025-03-18T23:15:27.5576204	Tags for minecraft:block mod id forestry
 37a390e7a402ae2ce1addd2b8bbefd6229e8c7c6 data/forestry/tags/blocks/acacia_desert_logs.json
 d38d236618a81cc1b2e0dbb4e4d7c11e43e522ea data/forestry/tags/blocks/balsa_logs.json
 16059fb3cfd04606a73b78eaefbf7659417cb9d5 data/forestry/tags/blocks/baobab_logs.json
@@ -16,6 +16,7 @@ eafee3357587c960c9eb1405b3b788747d3f34e2 data/forestry/tags/blocks/flowers/coral
 b84c5008081b8b3970cd6f45e95d61eac8932921 data/forestry/tags/blocks/flowers/nether.json
 bd6700108f31975213042e02d5820f5e1795280a data/forestry/tags/blocks/flowers/plantable.json
 85f8feb482014b8e5637825e51e685a7fcd6fd47 data/forestry/tags/blocks/flowers/plantable_ground.json
+cc9497c65f14a52560f3ea352812f1d6f2d7bbe3 data/forestry/tags/blocks/flowers/sculk.json
 33989d311cb039fba05887c9685d2c212383b511 data/forestry/tags/blocks/flowers/sea.json
 a72c613d8786fc7756573ffec9c22f7ed2973d9e data/forestry/tags/blocks/flowers/snow.json
 a72c613d8786fc7756573ffec9c22f7ed2973d9e data/forestry/tags/blocks/flowers/vanilla.json

@@ -29,9 +29,14 @@ import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
+import forestry.api.ForestryTags;
 import forestry.api.apiculture.BeeManager;
+import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.apiculture.IArmorApiarist;
 import forestry.api.client.IClientModuleHandler;
+import forestry.api.core.ForestryEvent;
+import forestry.api.core.TemperatureType;
+import forestry.api.genetics.ForestryTaxa;
 import forestry.api.modules.ForestryModule;
 import forestry.api.modules.ForestryModuleIds;
 import forestry.api.modules.IPacketRegistry;
@@ -44,6 +49,7 @@ import forestry.apiculture.network.packets.PacketHabitatBiomePointer;
 import forestry.apiculture.proxy.ApicultureClientHandler;
 import forestry.apiculture.villagers.ApicultureVillagers;
 import forestry.core.network.PacketIdClient;
+import forestry.core.utils.SpeciesUtil;
 import forestry.modules.BlankForestryModule;
 
 @ForestryModule
@@ -67,6 +73,7 @@ public class ModuleApiculture extends BlankForestryModule {
 		modBus.addListener(ModuleApiculture::onCommonSetup);
 
 		MinecraftForge.EVENT_BUS.addListener(ApicultureVillagers::villagerTrades);
+		MinecraftForge.EVENT_BUS.addListener(ModuleApiculture::onNetherBeeMate);
 	}
 
 	private static void onCommonSetup(FMLCommonSetupEvent event) {
@@ -83,6 +90,12 @@ public class ModuleApiculture extends BlankForestryModule {
 
 	private static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.register(IArmorApiarist.class);
+	}
+
+	private static void onNetherBeeMate(ForestryEvent.BeeMatingEvent event) {
+		if (event.getPrincess().getSpecies().getGenusName().equals(ForestryTaxa.GENUS_EMBITTERED) && event.getHousing().temperature() != TemperatureType.HELLISH) {
+			event.setPrincess(SpeciesUtil.getBeeSpecies(ForestryBeeSpecies.ZOMBIFIED).createIndividual());
+		}
 	}
 
 	@Override

@@ -945,5 +945,47 @@ public class DefaultBeeSpecies {
 				})
 				.setAuthority("EnderiumSmith");
 
+		// ZOMBIFIED
+		apiculture.registerSpecies(ForestryBeeSpecies.ZOMBIFIED, GENUS_ABOMINATION, SPECIES_ZOMBIFIED, true, new Color(0x698E45))
+				.setBody(new Color(0xE4686A))
+				.setTemperature(TemperatureType.HELLISH)
+				.setHumidity(HumidityType.ARID)
+				.addProduct(BEE_COMBS.stack(EnumHoneyComb.SIMMERING), 0.20F)
+				.addProduct(new ItemStack(Items.GOLD_NUGGET), 0.15F)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_IMMORTAL);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
+					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWEST);
+					genome.set(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_NETHER);
+					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
+					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_3);
+					genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
+					genome.set(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_METATURNAL);
+					genome.set(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
+				})
+				.setAuthority("EnderiumSmith");
+
+		// SCULK
+		apiculture.registerSpecies(ForestryBeeSpecies.SCULK, GENUS_ABOMINATION, SPECIES_SCULK, true, new Color(0xD1D6B6))
+				.setBody(new Color(0x05625D))//0x034150//0x111B21
+				.addProduct(BEE_COMBS.stack(EnumHoneyComb.SCULKEN), 0.30F)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
+					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWEST);
+					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
+					genome.set(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_SCULK);
+					genome.set(BeeChromosomes.EFFECT, ForestryAlleles.EFFECT_SCULK);
+					genome.set(BeeChromosomes.TERRITORY, ForestryAlleles.TERRITORY_LARGER);
+					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1);
+					genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1);
+					genome.set(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_METATURNAL);
+					genome.set(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
+				})
+				.addMutations(mutations -> {
+					mutations.add(ForestryBeeSpecies.ABYSSAL, ForestryBeeSpecies.PHANTASMAL, 4).restrictBiomeType(ForestryTags.Biomes.DEEP_DARK);
+				})
+				.setGlint(true)
+				.setAuthority("EnderiumSmith");
 	}
 }

@@ -21,4 +21,5 @@ public class ForestryFlowerTypes {
 	public static final ResourceLocation PHOTOSYNTHESIS = ForestryConstants.forestry("flower_type_photosynthesis");
 	public static final ResourceLocation SEA = ForestryConstants.forestry("flower_type_sea");
 	public static final ResourceLocation CORAL = ForestryConstants.forestry("flower_type_coral");
+	public static final ResourceLocation SCULK = ForestryConstants.forestry("flower_type_sculk");
 }

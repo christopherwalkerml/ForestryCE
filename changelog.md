@@ -1,5 +1,7 @@
 ## Forestry 2.4.7
 - Add missing sponge comb recipes (#202)
+- Add new Zombified species, obtained by breeding an Embittered, Spiteful, or Seething princess with any drone while in a non-Hellish climate
+- Add new Sculk species, mutated from Abyssal and Phantasmal, that produces Sculk and Experience Drops that can be converted to Experience Bottles
 
 ## Forestry 2.4.6
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)

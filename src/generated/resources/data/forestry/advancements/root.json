@@ -77,6 +77,11 @@
             "items": [
               "forestry:bee_comb_sponge"
             ]
+          },
+          {
+            "items": [
+              "forestry:bee_comb_sculken"
+            ]
           }
         ]
       },

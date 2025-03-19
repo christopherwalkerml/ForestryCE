@@ -76,6 +76,7 @@ public class ForestryTags {
 		public static final TagKey<Block> CAVE_FLOWERS = blockTag("flowers/cave");
 		public static final TagKey<Block> SEA_FLOWERS = blockTag("flowers/sea");
 		public static final TagKey<Block> CORAL_FLOWERS = blockTag("flowers/coral");
+		public static final TagKey<Block> SCULK_FLOWERS = blockTag("flowers/sculk");
 
 		// Flowers that can grow around hives
 		public static final TagKey<Block> PLANTABLE_FLOWERS = blockTag("flowers/plantable");
@@ -216,6 +217,7 @@ public class ForestryTags {
 
 		public static final TagKey<Biome> SHATTERED_SAVANNA = tag("special/shattered_savanna");
 		public static final TagKey<Biome> WARPED_FOREST = tag("special/warped_forest");
+		public static final TagKey<Biome> DEEP_DARK = tag("special/deep_dark");
 
 		private static TagKey<Biome> tag(String path) {
 			return TagKey.create(Registries.BIOME, ForestryConstants.forestry(path));

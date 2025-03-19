@@ -367,6 +367,8 @@ public class ForestryRecipeProvider {
 			recipe.pattern(" # ");
 			recipe.pattern(" Y ");
 		});
+
+		recipes.shapelessCrafting("exp_bottle_from_exp_drop", RecipeCategory.MISC, Items.EXPERIENCE_BOTTLE, 1, Items.GLASS_BOTTLE, ApicultureItems.EXPERIENCE_DROP.item());
 	}
 
 	private static void registerCombRecipes(MKRecipeProvider recipes) {
@@ -1596,6 +1598,13 @@ public class ForestryRecipeProvider {
 				.product(0.2f, CoreItems.CRAFTING_MATERIALS.get(EnumCraftingMaterial.BEESWAX).stack())
 				.product(0.3f, new ItemStack(Items.QUARTZ))
 				.build(consumer, id("centrifuge", "mellow_comb"));
+		new CentrifugeRecipeBuilder()
+				.setProcessingTime(20)
+				.setInput(Ingredient.of(ApicultureItems.BEE_COMBS.get(EnumHoneyComb.SCULKEN)))
+				.product(1.0f, CoreItems.CRAFTING_MATERIALS.get(EnumCraftingMaterial.BEESWAX).stack())
+				.product(0.9f, ApicultureItems.EXPERIENCE_DROP.stack())
+				.product(0.2F, new ItemStack(Items.SCULK))
+				.build(consumer, id("centrifuge", "sculken_comb"));
 		new CentrifugeRecipeBuilder()
 				.setProcessingTime(5)
 				.setInput(Ingredient.of(ApicultureItems.PROPOLIS.get(EnumPropolis.SILKY)))
