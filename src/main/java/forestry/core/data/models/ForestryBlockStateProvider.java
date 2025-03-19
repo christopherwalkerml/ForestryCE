@@ -109,8 +109,7 @@ public class ForestryBlockStateProvider extends BlockStateProvider {
 
 			ResourceLocation side = modBlock("beehives/" + type.getSerializedName() + ".side");
 			ResourceLocation top = modBlock("beehives/" + type.getSerializedName() + ".top");
-			// todo make all hives use bottom textures
-			ResourceLocation bottom = type == BlockHiveType.LUSH ? modBlock("beehives/" + type.getSerializedName() + ".bottom") : top;
+			ResourceLocation bottom = modBlock("beehives/" + type.getSerializedName() + ".bottom");
 
 			singleModelBlock(this, feature, models().cubeBottomTop(path, side, bottom, top));
 			generic3d(feature);
