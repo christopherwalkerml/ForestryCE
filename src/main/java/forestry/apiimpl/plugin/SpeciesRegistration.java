@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import com.mojang.datafixers.util.Pair;
 
+import forestry.Forestry;
 import forestry.api.IForestryApi;
 import forestry.api.genetics.IGenome;
 import forestry.api.genetics.IMutation;
@@ -67,7 +68,14 @@ public abstract class SpeciesRegistration<I extends ISpeciesBuilder<? extends IS
 			for (ITaxon taxon : ancestry) {
 				for (Map.Entry<IChromosome<?>, ITaxon.TaxonAllele> alleleEntry : taxon.alleles().entrySet()) {
 					IAllele allele = alleleEntry.getValue().allele();
-					defaultGenomeBuilder.set(alleleEntry.getKey(), allele.cast());
+					IChromosome<?> chromosome = alleleEntry.getKey();
+
+					if (karyotype.isAlleleValid(chromosome, allele.cast())) {
+						defaultGenomeBuilder.set(alleleEntry.getKey(), allele.cast());
+					} else {
+						// If a taxa is shared by different species types, don't throw errors for incompatible default alleles
+						Forestry.LOGGER.warn("Default allele set by taxon {} skipped for species {} due to being invalid for its karyotype", taxon.name(), id);
+					}
 				}
 			}
 

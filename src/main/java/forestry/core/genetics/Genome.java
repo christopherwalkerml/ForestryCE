@@ -169,6 +169,8 @@ public final class Genome implements IGenome {
 			if (this.karyotype.isAlleleValid(chromosome, allele)) {
 				this.active.put(chromosome, allele);
 				this.inactive.put(chromosome, allele);
+			} else {
+				throw new IllegalArgumentException("Allele " + allele.alleleId() + " is not a valid value for chromosome " + chromosome.id() + " in the karyotype with species chromosome " + this.karyotype.getSpeciesChromosome().id());
 			}
 		}
 
