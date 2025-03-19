@@ -118,6 +118,7 @@ public class BeeTaxonomy {
 					genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
 					genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
 				});
+				family.defineSubTaxon(ForestryTaxa.GENUS_ABOMINATION);
 			});
 		});
 	}

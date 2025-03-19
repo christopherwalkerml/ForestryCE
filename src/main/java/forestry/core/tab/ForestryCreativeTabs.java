@@ -238,6 +238,7 @@ public class ForestryCreativeTabs {
 		ApicultureItems.PROPOLIS.getItems().forEach(items::accept);
 		ApicultureItems.POLLEN_CLUSTER.getItems().forEach(items::accept);
 		items.accept(ApicultureItems.ROYAL_JELLY);
+		items.accept(ApicultureItems.EXPERIENCE_DROP);
 
 		for (ILifeStage stage : SpeciesUtil.BEE_TYPE.get().getLifeStages()) {
 			for (IBeeSpecies species : SpeciesUtil.getAllBeeSpecies()) {

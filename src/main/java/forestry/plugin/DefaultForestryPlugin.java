@@ -75,6 +75,7 @@ import forestry.apiculture.genetics.effects.PotionBeeEffectExclusive;
 import forestry.apiculture.genetics.effects.RadioactiveBeeEffect;
 import forestry.apiculture.genetics.effects.RepulsionBeeEffect;
 import forestry.apiculture.genetics.effects.ResurrectionBeeEffect;
+import forestry.apiculture.genetics.effects.SculkSpreadBeeEffect;
 import forestry.apiculture.genetics.effects.SifterBeeEffect;
 import forestry.apiculture.genetics.effects.SnowingBeeEffect;
 import forestry.apiculture.hives.HiveDefinition;
@@ -298,6 +299,7 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerFlowerType(ForestryFlowerTypes.PHOTOSYNTHESIS, new PhotosynthesisFlowerType());
 		apiculture.registerFlowerType(ForestryFlowerTypes.SEA, new WaterFlowerType(ForestryTags.Blocks.SEA_FLOWERS, false));
 		apiculture.registerFlowerType(ForestryFlowerTypes.CORAL, new WaterFlowerType(ForestryTags.Blocks.CORAL_FLOWERS, false));
+		apiculture.registerFlowerType(ForestryFlowerTypes.SCULK, new FlowerType(ForestryTags.Blocks.SCULK_FLOWERS, false));
 
 		apiculture.registerBeeEffect(ForestryBeeEffects.NONE, new DummyBeeEffect(true));
 		apiculture.registerBeeEffect(ForestryBeeEffects.AGGRESSIVE, new AggressiveBeeEffect());
@@ -324,6 +326,7 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerBeeEffect(ForestryBeeEffects.GUARDIAN, new GuardianBeeEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.PHASING, new PhasingBeeEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.ASCENSION, new AscensionBeeEffect());
+		apiculture.registerBeeEffect(ForestryBeeEffects.SCULK, new SculkSpreadBeeEffect());
 
 		apiculture.registerActivityType(ForestryActivityTypes.DIURNAL, new SingleActivityType(0, 12000, ForestryError.NOT_DAY, LightPreference.ANY));
 		apiculture.registerActivityType(ForestryActivityTypes.NOCTURNAL, new SingleActivityType(12000, 24000, ForestryError.NOT_NIGHT, LightPreference.DARK));

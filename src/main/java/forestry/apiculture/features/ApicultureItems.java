@@ -18,7 +18,6 @@ import forestry.apiculture.items.ItemPollenCluster;
 import forestry.apiculture.items.ItemPropolis;
 import forestry.apiculture.items.ItemScoop;
 import forestry.apiculture.items.ItemSmoker;
-import forestry.apiculture.items.ItemWaxCast;
 import forestry.core.items.ItemForestryFood;
 import forestry.modules.features.FeatureItem;
 import forestry.modules.features.FeatureItemGroup;
@@ -45,6 +44,7 @@ public class ApicultureItems {
 	// BEE RESOURCES
 	public static final FeatureItem<Item> HONEY_DROP = REGISTRY.item("honey_drop");
 	public static final FeatureItem<Item> HONEYDEW = REGISTRY.item("honeydew");
+	public static final FeatureItem<Item> EXPERIENCE_DROP = REGISTRY.item("experience_drop");
 	public static final FeatureItemGroup<ItemPropolis, EnumPropolis> PROPOLIS = REGISTRY.itemGroup(ItemPropolis::new, "propolis", EnumPropolis.values());
 
 	public static final FeatureItem<Item> ROYAL_JELLY = REGISTRY.item("royal_jelly");
