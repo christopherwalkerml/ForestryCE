@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "bottom": "forestry:block/beehives/forest.top",
+    "bottom": "forestry:block/beehives/forest.bottom",
     "side": "forestry:block/beehives/forest.side",
     "top": "forestry:block/beehives/forest.top"
   }
