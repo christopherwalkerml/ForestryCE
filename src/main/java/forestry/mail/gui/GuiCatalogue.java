@@ -14,6 +14,8 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import forestry.mail.carriers.PostalCarriers;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -26,7 +28,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 
-import forestry.api.mail.EnumAddressee;
 import forestry.api.mail.ITradeStationInfo;
 import forestry.core.config.SessionVars;
 import forestry.core.gui.GuiForestry;
@@ -62,10 +63,10 @@ public class GuiCatalogue extends GuiForestry<ContainerCatalogue> {
 		addRenderableWidget(new Button.Builder(Component.literal(">"), b -> actionPerformed(2)).pos(width / 2 + 44, topPos + 150).size(12, 20).build());
 		addRenderableWidget(new Button.Builder(Component.literal("<"), b -> actionPerformed(3)).pos(width / 2 - 58, topPos + 150).size(12, 20).build());
 
-		this.buttonFilter = new Button.Builder(Component.translatable("for.gui.mail.filter.all"), b -> actionPerformed(4)).pos(width / 2 - 44, topPos + 150).size(42, 20).build();
+		this.buttonFilter = new Button.Builder(Component.translatable("for.gui.mail.filter.all"), b -> actionPerformed(4)).pos(this.width / 2 - 44, this.topPos + 150).size(42, 20).build();
 		addRenderableWidget(this.buttonFilter);
 
-		this.buttonUse = new Button.Builder(Component.translatable("for.gui.mail.address.copy"), b -> actionPerformed(5)).pos(width / 2, topPos + 150).size(42, 20).build();
+		this.buttonUse = new Button.Builder(Component.translatable("for.gui.mail.address.copy"), b -> actionPerformed(5)).pos(this.width / 2, this.topPos + 150).size(42, 20).build();
 		addRenderableWidget(this.buttonUse);
 	}
 
@@ -147,8 +148,9 @@ public class GuiCatalogue extends GuiForestry<ContainerCatalogue> {
 				ITradeStationInfo info = menu.getTradeInfo();
 				if (info != null) {
 					SessionVars.setStringVar("mail.letter.recipient", info.address().getName());
-					SessionVars.setStringVar("mail.letter.addressee", EnumAddressee.TRADER.toString());
+					SessionVars.setStringVar("mail.letter.carrier", PostalCarriers.TRADER.getKey().location().toString());
 				}
+				player.displayClientMessage(Component.translatable("for.gui.mail.catalogue.save_info"), false);
 				player.closeContainer();
 			}
 		}

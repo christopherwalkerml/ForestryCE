@@ -14,8 +14,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 import org.lwjgl.glfw.GLFW;
 
@@ -35,8 +35,6 @@ public class GuiTradeName extends GuiForestry<ContainerTradeName> {
 		this.tile = container.getTile();
 		this.imageWidth = 176;
 		this.imageHeight = 90;
-
-		addressNameField = new EditBox(this.font, leftPos + 44, topPos + 39, 90, 14, null);
 	}
 
 	@Override
@@ -44,51 +42,44 @@ public class GuiTradeName extends GuiForestry<ContainerTradeName> {
 		super.init();
 
 		addressNameField = new EditBox(this.font, leftPos + 44, topPos + 39, 90, 14, null);
+		addressNameField.setCanLoseFocus(true);
+		addressNameField.setTextColor(-1);
+		addressNameField.setTextColorUneditable(-1);
+		addressNameField.setBordered(true);
+		addressNameField.setMaxLength(12);
 		addressNameField.setValue(menu.getAddress().getName());
-		addressNameField.setFocused(true);
+		addWidget(this.addressNameField);
+		setInitialFocus(this.addressNameField);
+		addressNameField.setEditable(true);
 	}
 
 	@Override
 	public boolean keyPressed(int key, int scanCode, int modifiers) {
+		if (key == GLFW.GLFW_KEY_ESCAPE) {
+			this.minecraft.player.closeContainer();
+		}
 
-		// Set focus or enter text into address
-		if (addressNameField.isFocused()) {
-			if (scanCode == GLFW.GLFW_KEY_ENTER) {
-				setAddress();
-			} else {
-				addressNameField.keyPressed(key, scanCode, modifiers);
-			}
+		if (key == GLFW.GLFW_KEY_ENTER && this.addressNameField.isFocused()) {
+			setAddress();
 			return true;
 		}
 
-		return super.keyPressed(key, scanCode, modifiers);
+		return this.addressNameField.keyPressed(key, scanCode, modifiers)
+				|| this.addressNameField.canConsumeInput()
+				|| super.keyPressed(key, scanCode, modifiers);
 	}
 
 	@Override
-	public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
-		if (super.mouseClicked(mouseX, mouseY, mouseButton)) {
-			return false;    //TODO this return value
-		}
-		addressNameField.mouseClicked(mouseX, mouseY, mouseButton);
-		return true;
-	}
+	protected void renderBg(GuiGraphics graphics, float partialTicks, int mouseX, int mouseY) {
+		super.renderBg(graphics, partialTicks, mouseX, mouseY);
 
-	@Override
-	protected void renderBg(GuiGraphics graphics, float partialTicks, int var3, int var2) {
-		super.renderBg(graphics, partialTicks, var3, var2);
-
-		Component prompt = Component.translatable("for.gui.mail.nametrader");
 		textLayout.startPage(graphics);
 		textLayout.newLine();
-		textLayout.drawCenteredLine(graphics, prompt, 0, ColourProperties.INSTANCE.get("gui.mail.text"));
+		textLayout.drawCenteredLine(graphics, Component.translatable("for.gui.mail.nametrader"), 0, ColourProperties.INSTANCE.get("gui.mail.text"));
+		textLayout.newLine(38);
+		textLayout.drawCenteredLine(graphics, Component.translatable("for.gui.mail.nametrader.finish"), 0, ColourProperties.INSTANCE.get("gui.mail.text"));
 		textLayout.endPage(graphics);
-		addressNameField.render(graphics, var2, var3, partialTicks);    //TODO correct?
-	}
-
-	@Override
-	public void removed() {
-		super.removed();
-		setAddress();
+		addressNameField.render(graphics, mouseY, mouseX, partialTicks);
 	}
 
 	private void setAddress() {
@@ -101,6 +92,6 @@ public class GuiTradeName extends GuiForestry<ContainerTradeName> {
 
 	@Override
 	protected void addLedgers() {
-		addErrorLedger(tile);
+		addErrorLedger(this.tile);
 	}
 }
