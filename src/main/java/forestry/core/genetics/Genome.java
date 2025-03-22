@@ -7,6 +7,7 @@ import com.google.common.collect.ImmutableMap;
 import java.util.IdentityHashMap;
 import java.util.Map;
 
+import forestry.api.IForestryApi;
 import forestry.api.genetics.IGenome;
 import forestry.api.genetics.ISpecies;
 import forestry.api.genetics.alleles.AllelePair;
@@ -41,7 +42,7 @@ public final class Genome implements IGenome {
 				AllelePair<?> speciesPair = map.get(karyotype.getSpeciesChromosome());
 				if (speciesPair == null) {
 					// If species was added/removed, revert to default
-					species = SpeciesUtil.BEE_TYPE.get().getDefaultSpecies();
+					species = karyotype.getSpeciesChromosome().get(karyotype.getDefaultSpecies());
 				} else {
 					species = speciesPair.active()
 							.<IRegistryAllele<ISpecies<?>>>cast()
