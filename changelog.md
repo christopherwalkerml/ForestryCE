@@ -1,6 +1,7 @@
 ## Forestry 2.5.1
 - Simmering comb no longer produces Phosphorus
 - Frozen Ocean is now an Icy Biome
+- Fix Apiarist armor and durability
 
 ## Forestry 2.5.0
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)
