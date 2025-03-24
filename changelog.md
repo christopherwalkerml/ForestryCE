@@ -4,6 +4,7 @@
 - Fix Apiarist armor and durability
 - Add KubeJS bindings for TemperatureType, HumidityType, and ForestryTaxa
 - Remove hive placement log spam
+- Replace all usages of old Stack with faster ArrayDeque class (free optimization)
 
 ## Forestry 2.5.0
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)
