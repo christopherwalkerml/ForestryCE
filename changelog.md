@@ -5,6 +5,7 @@
 - Add KubeJS bindings for TemperatureType, HumidityType, and ForestryTaxa
 - Remove hive placement log spam
 - Replace all usages of old Stack with faster ArrayDeque class (free optimization)
+- Fix API init timing to always be after all mod items have registered instead of just most of the time (#196)
 
 ## Forestry 2.5.0
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)
