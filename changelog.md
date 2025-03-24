@@ -3,6 +3,7 @@
 - Frozen Ocean is now an Icy Biome
 - Fix Apiarist armor and durability
 - Add KubeJS bindings for TemperatureType, HumidityType, and ForestryTaxa
+- Remove hive placement log spam
 
 ## Forestry 2.5.0
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)
