@@ -6,6 +6,7 @@
 - Remove hive placement log spam
 - Replace all usages of old Stack with faster ArrayDeque class (free optimization)
 - Fix API init timing to always be after all mod items have registered instead of just most of the time (#196)
+- Add config option to disable enchantment glints on bees (#170)
 
 ## Forestry 2.5.0
 - Added Lush and Aquatic Bees to shared breeding patterns (#190)
